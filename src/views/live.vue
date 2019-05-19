@@ -41,7 +41,7 @@
       </div>
       <!---->
       <div style="margin: 0px auto; width: 780px;">
-        <a href="javascript:;" target="_blank">
+        <a href="https://www.yabox7.com/?i_code=39914" target="_blank">
           <img width="780px" height="80px" src="../assets/img/img1.png" alt="" style="margin-top: 10px;">
         </a>
       </div>

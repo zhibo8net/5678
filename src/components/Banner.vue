@@ -1,6 +1,5 @@
 <template>
   <div :class="{'banner':!isMob,'mobBanner':isMob}" >
-    <!-- {{bannerList}} -->
     <el-carousel :interval="3000" :indicator-position="isMob?'none':''" :arrow="isMob?'never':'hover'" v-if="bannerList.length>0">
       <el-carousel-item v-for="(item,index) in bannerList" :key="index" v-if="(item.adKey=='INDEX-TOP'&&!isMob)||(item.adKey=='MOBILE-LIVE-BOTTOM'&&isMob)">
         <h3>
@@ -26,6 +25,7 @@
 <script>
 import banner1 from '../assets/img/banner1.png'
 import banner2 from '../assets/img/banner2.png'
+import mbanner from '../assets/img/mbanner.png'
   export default {
     props: {
       // bannerList: {
@@ -51,6 +51,10 @@ import banner2 from '../assets/img/banner2.png'
         link:'https://aff.sports918.net/22324/1',
         adKey:'INDEX-TOP'
 
+    },{
+        image: mbanner,
+        link:'https://www.yabox7.com/?i_code=39914',
+        adKey:'MOBILE-LIVE-BOTTOM'
     }]
       }
     }

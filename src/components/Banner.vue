@@ -44,7 +44,7 @@ import mbanner from '../assets/img/mbanner.png'
       return {
         bannerList:[{
         image: banner1,
-        link:'https://www.yabox7.com/?i_code=39914',
+        link:'https://www.yabox12.com/?i_code=39914',
         adKey:'INDEX-TOP'
     },{
         image: banner2,

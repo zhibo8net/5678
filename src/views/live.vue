@@ -10,7 +10,7 @@
         <a href="index.html" class="back"></a>
         <div class="infoWrap">
           <div class="list1">
-            <img :src="configData.baseUrl+matchDeatil.masterTeamLink" class="first homeTeam_img">
+            <img :src="matchDeatil.masterTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+matchDeatil.masterTeamLink" class="first homeTeam_img" :onerror="defaultTeamImg">
             <span class="name1 homeTeam">{{matchDeatil.masterTeamName}}</span>
           </div>
           <div class="list2">
@@ -18,7 +18,7 @@
             <p class="gameTime matchTime_pc">{{matchDeatil.playDateStr}}</p>
           </div>
           <div class="list3">
-            <img :src="configData.baseUrl+matchDeatil.guestTeamLink" class="second visitingTeam_img">
+            <img :src="matchDeatil.guestTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+matchDeatil.guestTeamLink" class="second visitingTeam_img" :onerror="defaultTeamImg">
             <span class="name2 visitingTeam">{{matchDeatil.guestTeamName}}</span>
           </div>
         </div>
@@ -62,6 +62,7 @@
     },
     data() {
       return {
+        defaultTeamImg: 'this.src="' + require('../assets/img/defaultTeamImg.png') + '"',
         matchID: '',
         matchDeatil: {
           lives: []

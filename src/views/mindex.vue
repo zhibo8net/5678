@@ -16,7 +16,7 @@
           <div class="contentTop">{{matchs.dateStr}}</div>
           <router-link tag="div" class="contentBody" v-for="(match,ids) in matchs.matches" :key="ids" :to="{path:'/mlive',query:{'matchID':match.id}}">
             <div class="contentLeft">
-              <p><img :src="configData.baseUrl+match.masterTeamLink" alt=""></p>
+              <p><img :src="match.masterTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+match.masterTeamLink" alt="" :onerror="defaultTeamImg"></p>
               <p>{{match.masterTeamName}}</p>
             </div>
             <div class="contentCenter">
@@ -24,7 +24,7 @@
               <p>{{match.game}}{{match.rotation?match.rotation:""}}</p>
             </div>
             <div class="contentRight">
-              <p><img :src="configData.baseUrl+match.guestTeamLink" alt=""></p>
+              <p><img :src="match.guestTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+match.guestTeamLink" alt="" :onerror="defaultTeamImg"></p>
               <p>{{match.guestTeamName}}</p>
             </div>
           </router-link>
@@ -49,7 +49,8 @@
         activeName: '0',
         macthList:[],
         nameList:[],
-        loading:true
+        loading:true,
+        defaultTeamImg: 'this.src="' + require('../assets/img/defaultTeamImg.png') + '"'
       }
     },
     mounted() {
@@ -93,18 +94,18 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-    @import url('../assets/css/index');
+  @import url('../assets/css/index');
 </style>
 <style scoped>
-    .index {
-        height: 100%;
-        overflow: scroll;
-        -webkit-overflow-scrolling: touch;
-    }
-    .nodata{
-        padding-top: 5rem;
-        color:#999;
-        font-size: 1.2rem;
-    }
+  .index {
+      height: 100%;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+  }
+  .nodata {
+      padding-top: 5rem;
+      color: #999;
+      font-size: 1.2rem;
+  }
 </style>
 

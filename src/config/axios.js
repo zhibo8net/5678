@@ -7,7 +7,7 @@ const status = {
   NET_ERR: 404,
   SERVER_ERR: 500 // 网络连接异常，请稍候再试
 };
-const baseURL = window.location.href.indexOf('https://')>-1?'https://80zhibo.com/':'http://80zhibo.com'
+const baseURL = window.location.href.indexOf('https://')>-1?'https://80zhibo.com/':'http://5678zhibo.com'
 
 function successState(res) {
   if (res.status === status.SUCCESS || res.status === status.NO_CHANGE) {

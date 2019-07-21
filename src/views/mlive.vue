@@ -12,8 +12,7 @@
     <div data-v-3073f131="" class="today" v-if="matchDeatil.masterTeamName">
       <div data-v-3073f131="" class="vs-wrap clearfix">
         <div data-v-3073f131="" class="vs">
-          <img data-v-3073f131=""   :src="configData.baseUrl+matchDeatil.masterTeamLink"
-            class="gameLogo1 homeTeam_img">
+          <img data-v-3073f131="" :src="matchDeatil.masterTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+matchDeatil.masterTeamLink" :onerror="defaultTeamImg" class="gameLogo1 homeTeam_img">
           <p data-v-3073f131="" class="onePlayer homeTeam">{{matchDeatil.masterTeamName}}</p>
         </div>
         <div data-v-3073f131="" class="vs">
@@ -21,8 +20,8 @@
           <p data-v-3073f131="" class="time1 matchTitle" style="margin-top: 40px;">{{matchDeatil.playDateStr}}</p>
         </div>
         <div data-v-3073f131="" class="vs"><img data-v-3073f131=""
-            :src="configData.baseUrl+matchDeatil.guestTeamLink"
-            class="gameLogo2 visitingTeam_img">
+            :src="matchDeatil.guestTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+matchDeatil.guestTeamLink"
+            class="gameLogo2 visitingTeam_img" :onerror="defaultTeamImg">
           {{matchDeatil.guestTeamName}}
         </div>
       </div>
@@ -61,6 +60,7 @@
     },
     data() {
       return {
+        defaultTeamImg: 'this.src="' + require('../assets/img/defaultTeamImg.png') + '"',
         bannerList:[],
         isMob:!0,
         matchID:'',

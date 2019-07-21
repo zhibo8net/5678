@@ -50,7 +50,7 @@
                                                 style="vertical-align: middle;"
                                             >{{scope.row.masterTeamName}}</span>
                                             <img
-                                                :src="configData.baseUrl+scope.row.masterTeamLink"
+                                                :src="(scope.row.masterTeamLink).indexOf('zhibo8_default')>-1?defaultTeamImg:(configData.baseUrl+scope.row.masterTeamLink)"
                                                 width="30px"
                                                 :onerror="defaultTeamImg"
                                                 alt
@@ -64,7 +64,7 @@
                                             style="display: inline-block; text-align: left; width: 200px; vertical-align: middle;"
                                         >
                                             <img
-                                                :src="configData.baseUrl+scope.row.guestTeamLink"
+                                                :src="scope.row.guestTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+scope.row.guestTeamLink"
                                                 width="30px"
                                                 :onerror="defaultTeamImg"
                                                 alt

@@ -13,7 +13,7 @@
         <h3>
           <a href="" target="_blank">
             <img src="../assets/img/banner1.png" alt="" v-if="!isMob">
-            <img src="../assets/img/mbanner.jpg" alt="" v-else>
+            <img src="../assets/img/mbanner.png" alt="" v-else>
           </a></h3>
       </el-carousel-item>
     </el-carousel>
@@ -25,7 +25,7 @@
 <script>
 import banner1 from '../assets/img/banner1.png'
 import banner2 from '../assets/img/banner2.png'
-import mbanner from '../assets/img/mbanner.jpg'
+import mbanner from '../assets/img/mbanner.png'
   export default {
     props: {
       // bannerList: {
@@ -44,7 +44,7 @@ import mbanner from '../assets/img/mbanner.jpg'
       return {
         bannerList:[{
         image: banner1,
-        link:'https://www.yabox12.com/?i_code=39914',
+        link:'https://www.yabovip16.com/?i_code=39914',
         adKey:'INDEX-TOP'
     },{
         image: banner2,

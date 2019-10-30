@@ -16,7 +16,7 @@
           <div class="contentTop">{{matchs.dateStr}}</div>
           <router-link tag="div" class="contentBody" v-for="(match,ids) in matchs.matches" :key="ids" :to="{path:'/mlive',query:{'matchID':match.id}}">
             <div class="contentLeft">
-              <p><img :src="match.masterTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+match.masterTeamLink" alt="" :onerror="defaultTeamImg"></p>
+              <p><img :src="match.masterTeamLink&&match.masterTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+match.masterTeamLink" alt="" :onerror="defaultTeamImg"></p>
               <p>{{match.masterTeamName}}</p>
             </div>
             <div class="contentCenter">
@@ -24,7 +24,7 @@
               <p>{{match.game}}{{match.rotation?match.rotation:""}}</p>
             </div>
             <div class="contentRight">
-              <p><img :src="match.guestTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+match.guestTeamLink" alt="" :onerror="defaultTeamImg"></p>
+              <p><img :src="match.guestTeamLink&&match.guestTeamLink.indexOf('zhibo8_default')>-1?defaultTeamImg:configData.baseUrl+match.guestTeamLink" alt="" :onerror="defaultTeamImg"></p>
               <p>{{match.guestTeamName}}</p>
             </div>
           </router-link>

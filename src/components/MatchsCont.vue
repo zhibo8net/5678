@@ -18,7 +18,7 @@
               <p>关注公众号80爱看球</p>
                         </div>-->
                         <div>
-                            <img src="../assets/img/down.png" alt />
+                            <img src="../assets/img/down.jpeg" alt />
                             <p>下载滚球神器</p>
                         </div>
                     </div>

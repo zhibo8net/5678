@@ -13,7 +13,7 @@
         <h3>
           <a href="" target="_blank">
             <img src="../assets/img/banner1.png" alt="" v-if="!isMob">
-            <img src="../assets/img/mbanner.png" alt="" v-else>
+            <!-- <img src="../assets/img/mbanner.png" alt="" v-else> -->
           </a></h3>
       </el-carousel-item>
     </el-carousel>
@@ -46,11 +46,10 @@ import mbanner from '../assets/img/mbanner.png'
         image: banner1,
         link:'https://www.yabovip16.com/?i_code=39914',
         adKey:'INDEX-TOP'
-    },{
-        image: banner2,
-        link:'https://aff.sports918.net/22324/1',
-        adKey:'INDEX-TOP'
-
+    // },{
+    //     image: banner2,
+    //     link:'https://aff.sports918.net/22324/1',
+    //     adKey:'INDEX-TOP'
     },{
         image: mbanner,
         link:'https://www.yabox7.com/?i_code=39914',

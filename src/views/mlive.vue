@@ -42,7 +42,7 @@
           <a data-v-3073f131="" v-for="(item,i) in bannerList" :key="i" :href="item.link" target="_blank" v-if="item.adKey=='MOBILE-LIVE-TOP'"
             class="toLive">{{item.message}}</a>
           </div></div>
-      <bannerCon :bannerList="bannerList" :isMob='isMob'></bannerCon>
+      <!-- <bannerCon :bannerList="bannerList" :isMob='isMob'></bannerCon> -->
   </div>
 </template>
 
